@@ -4,5 +4,14 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-render(<App />, document.getElementById('root'));
+const rootEl = document.getElementById('root');
+
+render(<App />, rootEl);
 registerServiceWorker();
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    render(<NextApp />, rootEl);
+  });
+}
