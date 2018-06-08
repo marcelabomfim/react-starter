@@ -1,10 +1,21 @@
 {
-  "name": "my-react-starter",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-starter",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelabomfim/react-starter.git"
+  },
+  "author": "Marcela Bomfim <mbomfim@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelabomfim/react-starter/issues"
+  },
+  "homepage": "https://marcelabomfim.github.io/react-starter",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
@@ -16,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "polished": "^1.9.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
