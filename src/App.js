@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import AppContainer from 'containers/AppContainer';
-import Logo from 'components/Logo';
-import Title from 'components/Title';
+import Header from 'components/Header';
+import Main from 'components/Main';
+import Footer from 'components/Footer';
 
 class App extends Component {
   render() {
     return (
       <AppContainer>
         <Helmet title="My React Starter" />
-        <Logo className="AppLogo" />
-        <Title>Welcome to My React Starter</Title>
+        <Header />
+        <Main />
+        <Footer />
       </AppContainer>
     );
   }

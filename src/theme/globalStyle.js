@@ -26,4 +26,8 @@ injectGlobal`
     margin: 0;
     font-family: sans-serif;
   }
+
+  a, a:visited, a:focus {
+    color: inherit;
+  }
 `;
