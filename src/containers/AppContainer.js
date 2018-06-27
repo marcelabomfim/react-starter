@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom'; // 👈
 
 import { themes } from 'theme/globalStyle';
 import ThemeSelector from 'components/ThemeSelector';
@@ -7,7 +8,7 @@ import ThemeSelector from 'components/ThemeSelector';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  padding: 1rem;
+  padding: 0;
   background-color: ${props => props.theme.background};
   color: ${props => props.theme.primary};
   text-align: center;
@@ -28,15 +29,17 @@ class App extends Component {
     const { selected } = this.state;
 
     return (
-      <ThemeProvider theme={themes[selected]}>
-        <Container>
-          {this.props.children}
-          <ThemeSelector
-            selected={selected}
-            handleChange={this.handleThemeChange}
-          />
-        </Container>
-      </ThemeProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={themes[selected]}>
+          <Container>
+            {this.props.children}
+            <ThemeSelector
+              selected={selected}
+              handleChange={this.handleThemeChange}
+            />
+          </Container>
+        </ThemeProvider>
+      </BrowserRouter>
     );
   }
 }

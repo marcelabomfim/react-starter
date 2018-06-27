@@ -6,7 +6,8 @@ import Button from 'components/Button';
 const Selector = styled.div`
   position: fixed;
   width: 150px;
-  top: 10vh;
+  top: 50vh;
+  transform: translateY(-50%);
   left: -150px;
   background-color: ${props => props.theme.secondary};
   border: 2px solid ${props => props.theme.primary};

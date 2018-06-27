@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import { Route, Switch } from 'react-router-dom';
 
 import AppContainer from 'containers/AppContainer';
+
 import Header from 'components/Header';
-import Main from 'components/Main';
 import Footer from 'components/Footer';
+
+import Home from 'pages/Home';
+import About from 'pages/About';
 
 class App extends Component {
   render() {
@@ -12,7 +16,10 @@ class App extends Component {
       <AppContainer>
         <Helmet title="My React Starter" />
         <Header />
-        <Main />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
         <Footer />
       </AppContainer>
     );
