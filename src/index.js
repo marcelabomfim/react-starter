@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-snapshot';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from 'App';
+import registerServiceWorker from 'registerServiceWorker';
 
 const rootEl = document.getElementById('root');
 
@@ -9,8 +9,8 @@ render(<App />, rootEl);
 registerServiceWorker();
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
+  module.hot.accept('App', () => {
+    const NextApp = require('App').default;
     render(<NextApp />, rootEl);
   });
 }
