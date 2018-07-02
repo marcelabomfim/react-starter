@@ -29,7 +29,7 @@ class App extends Component {
     const { selected } = this.state;
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ThemeProvider theme={themes[selected]}>
           <Container>
             {this.props.children}

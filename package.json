@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/marcelabomfim/react-starter/issues"
   },
-  "homepage": "https://marcelabomfim.github.io/react-starter",
+  "homepage": "https://marcelabomfim.com/react-starter",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
